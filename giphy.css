@@ -1,12 +1,85 @@
-.gif-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+/* Reset & Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  .gif {
+  body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #8be9fd;
+    text-shadow: 0 0 10px #8be9fd;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+  }
+  
+  /* Search Area */
+  .search-area {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+    outline: none;
+  }
+  
+  button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #8be9fd;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background-color: #50fa7b;
+  }
+  
+  /* GIF Grid */
+  .gif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gif-grid img {
     width: 100%;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(139, 233, 253, 0.3);
+    transition: transform 0.2s;
+  }
+  
+  .gif-grid img:hover {
+    transform: scale(1.05);
   }
   
