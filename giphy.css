@@ -1,0 +1,12 @@
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .gif {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
