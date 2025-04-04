@@ -82,4 +82,28 @@
   .gif-grid img:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 320px) {  /* researched media query for small devices */
+    header {
+      text-align: center;
+    }
+  
+    .search-area { /* Stack the search area on small screens */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    input[type="text"] { /* Make the input field full width on small screens */
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .gif-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   
