@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const apiKey = 'FFKTRwsRmqtVbLugYTvhxuUtV7Tqpi14';
   
-    searchBtn.addEventListener('click', () => {
+    // ✅ Shared function to search and display GIFs
+    function searchGifs() {
       const query = searchInput.value.trim();
       if (!query) return;
   
@@ -25,6 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Error fetching GIFs:', error);
           resultsContainer.innerHTML = '<p>Something went wrong.</p>';
         });
+    }
+  
+    // 🖱️ Click handler
+    searchBtn.addEventListener('click', searchGifs);
+  
+    // ⌨️ Enter key handler (added ONCE)
+    searchInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        searchGifs();
+      }
     });
   });
+  
   
