@@ -25,10 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => displayGifs(data.data))
         .catch(error => {
-          console.error('Error fetching GIFs:', error);
-          resultsContainer.innerHTML = '<p>Something went wrong.</p>';
-        });
-    }
+            console.error('Error fetching GIFs:', error);
+            const errorMessage = document.createElement('p');
+            errorMessage.className = 'error-message';
+            errorMessage.textContent = 'Something went wrong 😔';
+          
+            resultsContainer.innerHTML = '';
+            resultsContainer.appendChild(errorMessage);
+          
+            setTimeout(() => {
+              errorMessage.remove();
+            }, 3000); // Fade out after 3 seconds
+          });
+        } 
   
     function loadTrendingGifs() {
       fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=12`)
