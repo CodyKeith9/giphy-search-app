@@ -152,4 +152,23 @@
   #clearBtn:hover {
     background-color: #ff4444;
   }
+
+  .looplight-logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+    color: #8be9fd;
+    text-align: center;
+    text-shadow:
+      0 0 5px #8be9fd,
+      0 0 10px #8be9fd,
+      0 0 20px #50fa7b,
+      0 0 40px #50fa7b;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .looplight-logo:hover {
+    transform: scale(1.05);
+  }
+  
   
