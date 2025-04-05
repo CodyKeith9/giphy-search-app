@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('searchBtn');
     const randomBtn = document.getElementById('randomBtn');
     const resultsContainer = document.getElementById('resultsContainer');
-  
+    const clearBtn = document.getElementById('clearBtn');
+    
     const apiKey = 'FFKTRwsRmqtVbLugYTvhxuUtV7Tqpi14';
   
     function displayGifs(gifs) {
@@ -69,7 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
         searchGifs();
       }
     });
-  
+
+    clearBtn.addEventListener('click', () => {
+        resultsContainer.innerHTML = '';
+      });
+      
     loadTrendingGifs(); // 🔥 Load trending on startup
   });
   

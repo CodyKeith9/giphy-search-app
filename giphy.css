@@ -138,3 +138,18 @@
     justify-self: center; /* Centers images within their grid cell */
   }
   
+  #clearBtn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5555;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  #clearBtn:hover {
+    background-color: #ff4444;
+  }
+  
