@@ -49,17 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function loadRandomGif() {
-        resultsContainer.innerHTML = ''; // ✅ Clear old GIFs
-      
         fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`)
           .then(response => response.json())
           .then(data => {
             const gif = data.data;
-            const img = document.createElement('img');
-            img.src = gif.images.fixed_height.url;
-            img.alt = gif.title;
-            img.classList.add('gif');
-            resultsContainer.appendChild(img);
+            displayGifs([gif]); // ✅ Pass a single gif as an array
           })
           .catch(error => {
             console.error('Error loading random GIF:', error);
